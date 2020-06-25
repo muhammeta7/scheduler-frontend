@@ -12,7 +12,8 @@ import { EmployeeComponent } from './employee/employee.component';
     declarations: [
         AppComponent,
         LoginComponent,
-        EmployeeComponent
+        EmployeeComponent,
+        LogoutComponent
     ],
     imports: [
         BrowserModule,

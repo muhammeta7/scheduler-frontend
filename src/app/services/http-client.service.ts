@@ -3,7 +3,7 @@ import {HttpClient} from '@angular/common/http';
 
 export class Employee{
     constructor(
-        public empId: string,
+        public empId: number,
         public name: string,
         public designation: string,
         public salary: string,
