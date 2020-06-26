@@ -19,9 +19,14 @@ export class EmployeeComponent implements OnInit {
     console.log('Heyyy');
   }
 
-  handleSuccessfulResponse(response)
-  {
+  handleSuccessfulResponse(response) {
     this.employees = response;
   }
 
+  deleteEmployee(employee: Employee): void {
+    this.httpClientService.deleteEmployee(employee.empId)
+        .subscribe( data => {
+          this.employees = this.employees.filter(u => u !== employee);
+        });
+  }
 }
