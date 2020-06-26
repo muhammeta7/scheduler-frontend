@@ -8,6 +8,8 @@ import {FormsModule} from '@angular/forms';
 import { LogoutComponent } from './logout/logout.component';
 import { EmployeeComponent } from './employee/employee.component';
 import { AddEmployeeComponent } from './add-employee/add-employee.component';
+import { HeaderComponent } from './header/header.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
     declarations: [
@@ -15,7 +17,9 @@ import { AddEmployeeComponent } from './add-employee/add-employee.component';
         LoginComponent,
         EmployeeComponent,
         LogoutComponent,
-        AddEmployeeComponent
+        AddEmployeeComponent,
+        HeaderComponent,
+        FooterComponent
     ],
     imports: [
         BrowserModule,
