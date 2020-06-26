@@ -9,17 +9,17 @@ import {Router} from '@angular/router';
 })
 export class LoginComponent implements OnInit {
     username = 'username';
-    password = '';
+    password = 'password';
     invalidLogin = false;
 
-    constructor(private router: Router, private authService: AuthenticationService) {}
+    constructor(private router: Router, private loginService: AuthenticationService) {}
 
     ngOnInit() {
     }
 
     checkLogin() {
         // @ts-ignore
-        if (this.authService(this.username, this.password)) {
+        if (this.loginService.authenticate(this.username, this.password)) {
             this.router.navigate(['']);
             this.invalidLogin = false;
         } else {
