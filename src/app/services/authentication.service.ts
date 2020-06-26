@@ -5,11 +5,10 @@ import {Injectable} from '@angular/core';
 })
 export class AuthenticationService {
 
-    constructor() {
-    }
+    constructor(){}
 
     authenticate(username, password) {
-        if (username === 'muhammeta7' && password === 'password') {
+        if (username === 'username' && password === 'password') {
             sessionStorage.setItem('username', username);
             return true;
         } else {
