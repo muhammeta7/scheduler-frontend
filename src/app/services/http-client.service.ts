@@ -1,5 +1,5 @@
 import {Injectable} from '@angular/core';
-import {HttpClient} from '@angular/common/http';
+import {HttpClient, HttpHeaders} from '@angular/common/http';
 
 export class Employee{
     constructor(
@@ -20,14 +20,23 @@ export class HttpClientService {
 
     getEmployees(){
         console.log('test');
-        return this.httpClient.get<Employee[]>('http://localhost:8080/employees');
+        let username = 'username';
+        let password = 'password';
+        const headers = new HttpHeaders({Authorization: 'Basic' + btoa(username + ':' + password)});
+        return this.httpClient.get<Employee[]>('http://localhost:8080/employees', {headers});
     }
 
     public deleteEmployee(id: number){
-        return this.httpClient.delete('http://localhost:8080/employees/' + id);
+        let username = 'username';
+        let password = 'password';
+        const headers = new HttpHeaders({Authorization: 'Basic' + btoa(username + ':' + password)});
+        return this.httpClient.delete('http://localhost:8080/employees/' + id, {headers});
     }
 
     public createEmployee(employee: Employee){
-        return this.httpClient.post<Employee>('http://localhost:8080/employees', employee);
+        let username = 'username';
+        let password = 'password';
+        const headers = new HttpHeaders({Authorization: 'Basic' + btoa(username + ':' + password)});
+        return this.httpClient.post<Employee>('http://localhost:8080/employees', employee, {headers});
     }
 }
