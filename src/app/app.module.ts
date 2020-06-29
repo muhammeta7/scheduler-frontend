@@ -12,6 +12,14 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import {AuthHttpInterceptorService} from './services/auth-http-interceptor.service';
 import { SignUpComponent } from './sign-up/sign-up.component';
+import {RouterModule, Routes} from '@angular/router';
+
+const appRoutes: Routes = [
+    {path: '', component: LoginComponent},
+    {path: 'login', component: LoginComponent},
+    {path: 'logout', component: LogoutComponent},
+    {path: 'register', component: SignUpComponent}
+];
 
 @NgModule({
     declarations: [
@@ -28,7 +36,9 @@ import { SignUpComponent } from './sign-up/sign-up.component';
         BrowserModule,
         AppRoutingModule,
         HttpClientModule,
-        FormsModule
+        FormsModule,
+        AppRoutingModule,
+        RouterModule.forRoot(appRoutes),
     ],
     providers: [
         {provide: HTTP_INTERCEPTORS, useClass: AuthHttpInterceptorService , multi: true}
