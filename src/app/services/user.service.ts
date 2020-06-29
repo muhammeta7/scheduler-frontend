@@ -7,7 +7,7 @@ import {Observable} from 'rxjs';
     providedIn: 'root'
 })
 export class UserService {
-    private CREATE_USER_URL = 'https://localhost:8080/register';
+    private CREATE_USER_URL = 'http://localhost:8080/register';
 
     constructor(private http: HttpClient) {
     }
