@@ -11,6 +11,7 @@ import { AddEmployeeComponent } from './add-employee/add-employee.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import {AuthHttpInterceptorService} from './services/auth-http-interceptor.service';
+import { SignUpComponent } from './sign-up/sign-up.component';
 
 @NgModule({
     declarations: [
@@ -20,7 +21,8 @@ import {AuthHttpInterceptorService} from './services/auth-http-interceptor.servi
         LogoutComponent,
         AddEmployeeComponent,
         HeaderComponent,
-        FooterComponent
+        FooterComponent,
+        SignUpComponent
     ],
     imports: [
         BrowserModule,
