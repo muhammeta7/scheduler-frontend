@@ -12,14 +12,14 @@
                     <!-- Name -->
                     <div class="input-group">
                         <div class="input-group-append">
-                            <span class="input-group-text"><i class="fa fa-user"></i></span>
+                            <span class="input-group-text"><i class="fa fa-id-card"></i></span>
                         </div>
                         <input
                                 type="text"
                                 id="fullName"
                                 name="fullName"
                                 class="form-control"
-                                placeholder="Full Name"
+                                placeholder="full name"
                                 [(ngModel)]="userModel.name"
                                 #name="ngModel"
                                 [ngClass]="{ 'is-invalid': f.submitted && name.invalid }"
@@ -71,7 +71,7 @@
                                 id="username"
                                 name="username"
                                 class="form-control"
-                                placeholder="Username"
+                                placeholder="username"
                                 [(ngModel)]="userModel.username"
                                 #username="ngModel"
                                 [ngClass]="{ 'is-invalid': f.submitted && username.invalid }"
@@ -87,8 +87,62 @@
                             </div>
                         </div>
                     </div>
+
+                    <!-- Password -->
+                    <div class="input-group">
+                        <div class="input-group-append">
+                            <span class="input-group-text"><i class="fa fa-lock"></i></span>
+                        </div>
+                        <input
+                                type="password"
+                                id="password"
+                                name="password"
+                                class="form-control"
+                                placeholder="password"
+                                [(ngModel)]="userModel.password"
+                                #password="ngModel"
+                                [ngClass]="{ 'is-invalid': f.submitted && password.invalid }"
+                                required
+                                minlength="3"
+                        />
+                        <div
+                                *ngIf="f.submitted && password.invalid"
+                                class="invalid-tooltip text-center w-100 mb-3 error-message"
+                        >
+                            <div *ngIf="password.errors?.required">
+                                Must be at least 3 characters
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Confirm Password -->
+                    <div class="input-group">
+                        <div class="input-group-append">
+                            <span class="input-group-text"><i class="fa fa-check-square"></i></span>
+                        </div>
+                        <input
+                                type="text"
+                                id="confirm"
+                                name="confirm"
+                                class="form-control"
+                                placeholder="confirm password"
+                                [(ngModel)]="userModel.password"
+                                #confirm="ngModel"
+                                [ngClass]="{ 'is-invalid': f.submitted && confirm.invalid }"
+                                required
+                                minlength="3"
+                        />
+                        <div
+                                *ngIf="f.submitted && confirm.invalid"
+                                class="invalid-tooltip text-center w-100 mb-3 error-message"
+                        >
+                            <div *ngIf="password.errors?.required">
+                                Must be at least 3 characters
+                            </div>
+                        </div>
+                    </div>
                 </form>
             </div>
+
 
         </div>
         <div class="col-sm-6">
@@ -102,120 +156,7 @@
 <!--<div class="d-flex justify-content-center h-100">-->
 <!--    <div class="user_card">-->
 <!--        <div class="d-flex justify-content-center">-->
-<!--            <div class="d-flex justify-content-center form_container">-->
-<!--                <form-->
-<!--                        name="form"-->
-<!--                        #f="ngForm"-->
-<!--                        (ngSubmit)="f.form.valid && createUser()"-->
-<!--                        novalidate-->
-<!--                        class="signup-form"-->
-<!--                >-->
-<!--                    &lt;!&ndash;&#45;&#45; Name  &#45;&#45;&ndash;&gt;-->
-<!--                    <div class="input-group">-->
-<!--                        <div class="input-group-append">-->
-<!--                            <span class="input-group-text"><i class="fa fa-user"></i></span>-->
-<!--                        </div>-->
-<!--                        <input-->
-<!--                                type="text"-->
-<!--                                id="fullName"-->
-<!--                                name="fullName"-->
-<!--                                class="form-control"-->
-<!--                                placeholder="full name"-->
-<!--                                [(ngModel)]="userModel.name"-->
-<!--                                #name="ngModel"-->
-<!--                                [ngClass]="{ 'is-invalid': f.submitted && name.invalid }"-->
-<!--                                required-->
-<!--                                minlength="3"-->
-<!--                        />-->
-<!--                        <div-->
-<!--                                *ngIf="f.submitted && name.invalid"-->
-<!--                                class="invalid-tooltip text-center w-100 mb-3 error-message"-->
-<!--                        >-->
-<!--                            <div *ngIf="name.errors?.required">-->
-<!--                                Must be at least 3 characters-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                    &lt;!&ndash;&#45;&#45; Email  &#45;&#45;&ndash;&gt;-->
-<!--                    <div class="input-group">-->
-<!--                        <div class="input-group-append">-->
-<!--                            <span class="input-group-text"><i class="fa fa-user"></i></span>-->
-<!--                        </div>-->
-<!--                        <input-->
-<!--                                type="text"-->
-<!--                                id="email"-->
-<!--                                name="email"-->
-<!--                                class="form-control"-->
-<!--                                placeholder="e-mail"-->
-<!--                                [(ngModel)]="userModel.email"-->
-<!--                                #email="ngModel"-->
-<!--                                [ngClass]="{ 'is-invalid': f.submitted && email.invalid }"-->
-<!--                                required-->
-<!--                                minlength="3"-->
-<!--                        />-->
-<!--                        <div-->
-<!--                                *ngIf="f.submitted && name.invalid"-->
-<!--                                class="invalid-tooltip text-center w-100 mb-3 error-message"-->
-<!--                        >-->
-<!--                            <div *ngIf="name.errors?.required">-->
-<!--                                Must be at least 3 characters-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                    &lt;!&ndash;&#45;&#45; Username  &#45;&#45;&ndash;&gt;-->
-<!--                    <div class="input-group">-->
-<!--                        <div class="input-group-append">-->
-<!--                            <span class="input-group-text"><i class="fa fa-user"></i></span>-->
-<!--                        </div>-->
-<!--                        <input-->
-<!--                                type="text"-->
-<!--                                id="userName"-->
-<!--                                name="userName"-->
-<!--                                class="form-control"-->
-<!--                                placeholder="username"-->
-<!--                                [(ngModel)]="userModel.username"-->
-<!--                                #userName="ngModel"-->
-<!--                                [ngClass]="{ 'is-invalid': f.submitted && userName.invalid }"-->
-<!--                                required-->
-<!--                                minlength="5"-->
-<!--                        />-->
-<!--                        <div-->
-<!--                                *ngIf="f.submitted && userName.invalid"-->
-<!--                                class="invalid-tooltip text-center w-100 error-message"-->
-<!--                        >-->
-<!--                            <div *ngIf="userName.errors?.required">-->
-<!--                                Must be at least 3 characters-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                    &lt;!&ndash;&#45;&#45; Password  &#45;&#45;&ndash;&gt;-->
-<!--                    <div class="input-group">-->
-<!--                        <div class="input-group-append">-->
-<!--                            <span class="input-group-text"><i class="fa fa-lock"></i></span>-->
-<!--                        </div>-->
-<!--                        <input-->
-<!--                                type="password"-->
-<!--                                id="password"-->
-<!--                                name="password"-->
-<!--                                class="form-control"-->
-<!--                                placeholder="password"-->
-<!--                                [(ngModel)]="userModel.password"-->
-<!--                                #password="ngModel"-->
-<!--                                [ngClass]="{ 'is-invalid': f.submitted && password.invalid }"-->
-<!--                                required-->
-<!--                                minlength="5"-->
-<!--                        />-->
-<!--                        <div-->
-<!--                                *ngIf="f.submitted && password.invalid"-->
-<!--                                class="invalid-tooltip text-center w-100 error-message"-->
-<!--                        >-->
-<!--                            <div *ngIf="password.errors?.required">-->
-<!--                                Must be at least 5 characters-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                    </div>-->
-
-<!--                    <div class="d-flex justify-content-center login_container">-->
+<!--                               <div class="d-flex justify-content-center login_container">-->
 <!--                        <button-->
 <!--                                type="submit"-->
 <!--                                class="btn login_btn"-->
