@@ -9,6 +9,7 @@
                         novalidate
                         class="signup-form"
                 >
+                    <!-- Name -->
                     <div class="input-group">
                         <div class="input-group-append">
                             <span class="input-group-text"><i class="fa fa-user"></i></span>
@@ -30,6 +31,58 @@
                                 class="invalid-tooltip text-center w-100 mb-3 error-message"
                         >
                             <div *ngIf="name.errors?.required">
+                                Must be at least 3 characters
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Email -->
+                    <div class="input-group">
+                        <div class="input-group-append">
+                            <span class="input-group-text"><i class="fa fa-envelope"></i></span>
+                        </div>
+                        <input
+                                type="email"
+                                id="email"
+                                name="email"
+                                class="form-control"
+                                placeholder="e-mail"
+                                [(ngModel)]="userModel.email"
+                                #email="ngModel"
+                                [ngClass]="{ 'is-invalid': f.submitted && email.invalid }"
+                                required
+                                minlength="3"
+                        />
+                        <div
+                                *ngIf="f.submitted && name.invalid"
+                                class="invalid-tooltip text-center w-100 mb-3 error-message"
+                        >
+                            <div *ngIf="email.errors?.required">
+                                Must be at least 3 characters
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Username -->
+                    <div class="input-group">
+                        <div class="input-group-append">
+                            <span class="input-group-text"><i class="fa fa-user-circle"></i></span>
+                        </div>
+                        <input
+                                type="text"
+                                id="username"
+                                name="username"
+                                class="form-control"
+                                placeholder="Username"
+                                [(ngModel)]="userModel.username"
+                                #username="ngModel"
+                                [ngClass]="{ 'is-invalid': f.submitted && username.invalid }"
+                                required
+                                minlength="3"
+                        />
+                        <div
+                                *ngIf="f.submitted && username.invalid"
+                                class="invalid-tooltip text-center w-100 mb-3 error-message"
+                        >
+                            <div *ngIf="username.errors?.required">
                                 Must be at least 3 characters
                             </div>
                         </div>
