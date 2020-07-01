@@ -33,6 +33,7 @@ export class SignUpComponent implements OnInit{
               alert('User already exists');
             } else{
               this.users.push(res);
+              console.log(this.users);
               this.router.navigate(['/login']);
             }
           },

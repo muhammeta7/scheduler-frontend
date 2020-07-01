@@ -1,11 +1,6 @@
 import {Injectable} from '@angular/core';
-import {HttpClient, HttpHeaders} from '@angular/common/http';
+import {HttpClient} from '@angular/common/http';
 import {map} from 'rxjs/operators';
-
-export class User {
-    constructor(public status: string) {
-    }
-}
 
 @Injectable({
     providedIn: 'root'
@@ -30,7 +25,6 @@ export class AuthenticationService {
 
     isUserLoggedIn() {
         const user = sessionStorage.getItem('username');
-        console.log(!(user === null));
         return !(user === null);
     }
 
