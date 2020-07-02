@@ -1,9 +1,11 @@
 <div class="container">
-  <div>
-    User Name : <input type="text" name="username" [(ngModel)]="username">
-    Password : <input type="password" name="password" [(ngModel)]="password">
-  </div>
-  <button (click)=checkLogin() class="btn btn-success">
-    Login
-  </button>
+    <div class="login">
+        <input type="text" placeholder="Enter username" name="username" [(ngModel)]="username">
+    </div>
+    <div class="login">
+        <input type="password" placeholder="Enter password" name="password" [(ngModel)]="password">
+    </div>
+    <button class="btn btn-success" (click)=checkLogin()>
+        Login
+    </button>
 </div>
