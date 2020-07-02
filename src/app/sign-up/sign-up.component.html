@@ -10,7 +10,7 @@
                         class="signup-form"
                 >
                     <!-- Name -->
-                    <div class="input-group">
+                    <div class="input-group user_info">
                         <div class="input-group-append">
                             <span class="input-group-text"><i class="fa fa-id-card"></i></span>
                         </div>
@@ -36,7 +36,7 @@
                         </div>
                     </div>
                     <!-- Email -->
-                    <div class="input-group">
+                    <div class="input-group user_info">
                         <div class="input-group-append">
                             <span class="input-group-text"><i class="fa fa-envelope"></i></span>
                         </div>
@@ -62,7 +62,7 @@
                         </div>
                     </div>
                     <!-- Username -->
-                    <div class="input-group">
+                    <div class="input-group user_info">
                         <div class="input-group-append">
                             <span class="input-group-text"><i class="fa fa-user-circle"></i></span>
                         </div>
@@ -89,7 +89,7 @@
                     </div>
 
                     <!-- Password -->
-                    <div class="input-group">
+                    <div class="input-group user_info">
                         <div class="input-group-append">
                             <span class="input-group-text"><i class="fa fa-lock"></i></span>
                         </div>
@@ -114,8 +114,8 @@
                             </div>
                         </div>
                     </div>
-                    <!-- Confirm Password -->
-                    <div class="input-group">
+                    <!-- Confirm Password TODO: Need to fix data binding-->
+                    <div class="input-group user_info">
                         <div class="input-group-append">
                             <span class="input-group-text"><i class="fa fa-check-square"></i></span>
                         </div>
@@ -138,6 +138,17 @@
                             <div *ngIf="password.errors?.required">
                                 Must be at least 3 characters
                             </div>
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-center">
+                        <div class="d-flex justify-content-center login_container">
+                            <button
+                                    type="submit"
+                                    class="btn btn-success login_btn"
+                                    [disabled]="!f.form.valid"
+                            >
+                                Submit<span> <i class="fa fa-hand-pointer-o ml-2"></i></span>
+                            </button>
                         </div>
                     </div>
                 </form>
