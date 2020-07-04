@@ -7,9 +7,16 @@
   text-align: center;
 }
 
-.credentials, .button{
+.input-group{
   margin-top: 3%;
+  max-width: 100%;
 }
+
+.fa-lock{
+  width: 16px;
+}
+
+
 .responsiveImage{
   width: auto;
   height: auto;
