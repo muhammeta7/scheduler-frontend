@@ -1,9 +1,17 @@
-.login{
+.container{
   margin: 2% auto;
-  width:90%;
 }
 
-.button{
+.login{
   margin: 2% auto;
-  width: 80%;
+  text-align: center;
+}
+
+.credentials, .button{
+  margin-top: 3%;
+}
+.responsiveImage{
+  width: auto;
+  height: auto;
+  max-width: 100%;
 }
