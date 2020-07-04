@@ -29,6 +29,9 @@ export class LoginComponent implements OnInit {
                 }
             )
         );
+    }
 
+    goToSignUpPage(){
+        this.router.navigate(['register']);
     }
 }

@@ -1,14 +1,17 @@
 <div class="container">
     <div class="row">
-        <div class="col-sm-6">
-            <img src="https://i.imgur.com/LOM8WX2.png" alt="logo" class="responsiveImage"/>
-        </div>
         <div class="col-sm-6 login">
-            <div class="credentials">
+            <div class="input-group">
+                <div class="input-group-append">
+                    <span class="input-group-text"><i class="fa fa-user-circle"></i></span>
+                </div>
                 <input type="text" placeholder="Enter username" name="username" [(ngModel)]="username">
             </div>
-            <div class="credentials">
-                <input type="password" placeholder="Enter password" name="password" [(ngModel)]="password">
+            <div class="input-group">
+                <div class="input-group-append">
+                    <span class="input-group-text"><i class="fa fa-lock"></i></span>
+                </div>
+                <input type="password" placeholder="Enter Password" name="password" [(ngModel)]="password">
             </div>
             <div class="button">
                 <button class="btn btn-success" (click)=checkLogin()>
@@ -17,6 +20,20 @@
             </div>
 
         </div>
+        <div class="col-sm-6">
+            <div>
+                <p>
+                    Don't have an account. Register here.
+                </p>
+            </div>
+            <div class="button">
+                <button class="btn btn-primary" (click)=goToSignUpPage()>
+                    Sign-Up
+                </button>
+            </div>
+
+        </div>
+
 
     </div>
 

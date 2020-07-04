@@ -7,11 +7,22 @@
   text-align: center;
 }
 
-.credentials, .button{
+.input-group{
   margin-top: 3%;
-}
-.responsiveImage{
-  width: auto;
-  height: auto;
   max-width: 100%;
 }
+
+.fa-lock{
+  width: 16px;
+}
+
+button{
+  margin: 3% auto;
+  text-align: center;
+}
+
+//.responsiveImage{
+//  width: auto;
+//  height: auto;
+//  max-width: 100%;
+//}
