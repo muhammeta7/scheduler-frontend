@@ -8,11 +8,11 @@ import {FormsModule} from '@angular/forms';
 import { LogoutComponent } from './logout/logout.component';
 import { EmployeeComponent } from './employee/employee.component';
 import { AddEmployeeComponent } from './add-employee/add-employee.component';
-import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import {AuthHttpInterceptorService} from './services/auth-http-interceptor.service';
 import { SignUpComponent } from './sign-up/sign-up.component';
 import {RouterModule, Routes} from '@angular/router';
+import { NavigationComponent } from './navigation/navigation.component';
 
 const appRoutes: Routes = [
     {path: '', component: LoginComponent},
@@ -28,9 +28,9 @@ const appRoutes: Routes = [
         EmployeeComponent,
         LogoutComponent,
         AddEmployeeComponent,
-        HeaderComponent,
         FooterComponent,
-        SignUpComponent
+        SignUpComponent,
+        NavigationComponent
     ],
     imports: [
         BrowserModule,
