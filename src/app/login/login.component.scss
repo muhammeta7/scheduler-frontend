@@ -1,14 +1,17 @@
 .container{
-  margin: 2% auto;
+  width: 100%;
+  margin-top: 5%;
+  background: url("https://i.imgur.com/3zsxWWC.png");
 }
 
 .login{
-  margin: 2% auto;
   text-align: center;
+  border: 1px solid black;
 }
 
 .signup{
   text-align: center;
+  border: 1px solid black;
 }
 
 .input-group{
