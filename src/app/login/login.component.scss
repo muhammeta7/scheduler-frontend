@@ -1,7 +1,9 @@
 .container{
   width: 100%;
   margin-top: 5%;
-  background: url("https://i.imgur.com/3zsxWWC.png");
+  background-image: url("https://www.transparenttextures.com/patterns/subtle-white-feathers.png");
+  background-color: #479761;
+  color: white;
 }
 
 .login{
@@ -27,15 +29,17 @@ button{
   margin: 3% auto;
 }
 
-//.responsiveImage{
-//  width: auto;
-//  height: auto;
-//  max-width: 100%;
-//}
-
 .registration{
   text-align: center;
   margin-top: 3%;
 }
 
+span.input-group-text, button{
+  background-image: url("https://www.transparenttextures.com/patterns/subtle-surface.png");
+  background-color: #19181A;
+  color: #edf500
+}
 
+i{
+  color: #edf500;
+}
