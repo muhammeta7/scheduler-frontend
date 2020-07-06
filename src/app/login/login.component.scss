@@ -1,8 +1,8 @@
 .container{
   width: 100%;
   margin-top: 5%;
-  background-image: url("https://www.transparenttextures.com/patterns/subtle-white-feathers.png");
-  background-color: #479761;
+  background-image: url("https://www.transparenttextures.com/patterns/wine-cork.png");
+  background-color: #ecc19c;
   color: white;
 }
 
@@ -32,14 +32,16 @@ button{
 .registration{
   text-align: center;
   margin-top: 3%;
+
 }
 
 span.input-group-text, button{
   background-image: url("https://www.transparenttextures.com/patterns/subtle-surface.png");
-  background-color: #19181A;
-  color: #edf500
+  background-color: #1e847f;
+  color: #000000;
 }
 
-i{
-  color: #edf500;
+i, .registration{
+  color: #000000;
 }
+
