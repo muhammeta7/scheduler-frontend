@@ -1,9 +1,10 @@
 .container{
   width: 100%;
   margin-top: 5%;
-  background-image: url("https://www.transparenttextures.com/patterns/wine-cork.png");
-  background-color: #ecc19c;
-  color: white;
+  // background-image: url("https://www.transparenttextures.com/patterns/cross-scratches.png");
+  // background-image: url("https://www.transparenttextures.com/patterns/crossword.png"); 1
+  background-image: url("https://www.transparenttextures.com/patterns/brushed-alum.png");
+  background-color: #1e847f;
 }
 
 .login{
@@ -32,16 +33,18 @@ button{
 .registration{
   text-align: center;
   margin-top: 3%;
-
+  color: #000000;
 }
 
 span.input-group-text, button{
   background-image: url("https://www.transparenttextures.com/patterns/subtle-surface.png");
-  background-color: #1e847f;
-  color: #000000;
+  background-color: #000000;
+  color: #ecc19c;
 }
 
-i, .registration{
-  color: #000000;
+i{
+  //background-color: #ecc19c;
+  //background-image: url("https://www.transparenttextures.com/patterns/back-pattern.png");
+  color: #ecc19c;
 }
 
