@@ -1,9 +1,9 @@
 <div class="container-fluid">
     <div class="row">
-        <div class="col-sm-6">
+        <div class="col-sm-6 image">
             <img src="https://i.imgur.com/LOM8WX2.png" alt="logo" class="responsiveImage"/>
         </div>
-        <div class="col-sm-6">
+        <div class="col-sm-6 signup">
             <div class="form_container">
                 <form
                         name="form"
@@ -22,7 +22,7 @@
                                 id="fullName"
                                 name="fullName"
                                 class="form-control"
-                                placeholder="full name"
+                                placeholder="Full Name"
                                 [(ngModel)]="userModel.name"
                                 #name="ngModel"
                                 [ngClass]="{ 'is-invalid': f.submitted && name.invalid }"
@@ -48,7 +48,7 @@
                                 id="email"
                                 name="email"
                                 class="form-control"
-                                placeholder="e-mail"
+                                placeholder="E-mail"
                                 [(ngModel)]="userModel.email"
                                 #email="ngModel"
                                 [ngClass]="{ 'is-invalid': f.submitted && email.invalid }"
@@ -74,7 +74,7 @@
                                 id="username"
                                 name="username"
                                 class="form-control"
-                                placeholder="username"
+                                placeholder="Username"
                                 [(ngModel)]="userModel.username"
                                 #username="ngModel"
                                 [ngClass]="{ 'is-invalid': f.submitted && username.invalid }"
@@ -101,7 +101,7 @@
                                 id="password"
                                 name="password"
                                 class="form-control"
-                                placeholder="password"
+                                placeholder="Password"
                                 [(ngModel)]="userModel.password"
                                 #password="ngModel"
                                 [ngClass]="{ 'is-invalid': f.submitted && password.invalid }"
@@ -127,7 +127,7 @@
                                 id="confirm"
                                 name="confirm"
                                 class="form-control"
-                                placeholder="confirm password"
+                                placeholder="Confirm Password"
                                 [(ngModel)]="userModel.password"
                                 #confirm="ngModel"
                                 [ngClass]="{ 'is-invalid': f.submitted && confirm.invalid }"
@@ -147,7 +147,7 @@
                         <div class="d-flex justify-content-center login_container">
                             <button
                                     type="submit"
-                                    class="btn btn-success login_btn"
+                                    class="btn login_btn"
                                     [disabled]="!f.form.valid"
                             >
                                 Submit<span> <i class="fa fa-hand-pointer-o ml-2"></i></span>
