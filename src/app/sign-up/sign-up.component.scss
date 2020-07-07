@@ -1,19 +1,42 @@
 .container-fluid{
   width: 100%;
   margin-top: 5%;
+
 }
 
 .user_info{
-  margin: 3% auto;
+  margin: 4% auto;
   width:80%;
+}
+
+.input-group-text{
+  background-image: url("https://www.transparenttextures.com/patterns/brilliant.png");
+  background-color: #316879;
+  color: #7fe7dc;
+}
+
+.signup{
+  padding-top: 1.25%;
+  background-image: url("https://www.transparenttextures.com/patterns/ag-square.png");
+  background-color: rgba(244, 148, 96, 0.76);
 }
 
 button{
   margin: 0 auto;
 }
 
-.fa-lock{
-  width: 16px;
+.login_btn{
+  background-image: url("https://www.transparenttextures.com/patterns/brilliant.png");
+  background-color: #316879;
+  color: #7fe7dc;
+}
+
+i{
+  color: #7fe7dc;
+}
+
+span.input-group-text{
+  width: 44.29px;
 }
 
 .responsiveImage{
