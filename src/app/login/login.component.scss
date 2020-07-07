@@ -1,19 +1,14 @@
 .container{
   width: 100%;
   margin-top: 5%;
-  background-image: url("https://www.transparenttextures.com/patterns/ag-square.png");
-  background-color: rgba(244, 148, 96, 0.76);
   color: white;
 }
 
 .login{
   text-align: center;
   border: 1px solid black;
-}
-
-.signup{
-  text-align: center;
-  border: 1px solid black;
+  background-image: url("https://www.transparenttextures.com/patterns/ag-square.png");
+  background-color: rgba(244, 148, 96, 0.76);
 }
 
 .input-group{
