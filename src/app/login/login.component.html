@@ -1,28 +1,32 @@
 <div class="container">
     <div class="row">
-        <div class="col-sm-6 login">
-            <div>
-                <p class="registration">
-                    App Description
-                </p>
-            </div>
-            <div class="input-group justify-content-center">
-                <div class="input-group-append">
-                    <span class="input-group-text"><i class="fa fa-user-circle"></i></span>
+        <div class="col-sm-6">
+            <form class="go-right">
+                <h5>Already a member?</h5>
+                <div class="row no-gutters">
+                    <div class="col-sm-2">
+                        <i class="fa fa-user-circle"></i>
+                    </div>
+                    <div class="col-sm-10">
+                        <input id="username" name="username" type="text" required [(ngModel)]="username">
+                        <label for="username">Username</label>
+                    </div>
                 </div>
-                <input type="text" placeholder="Enter Username" name="username" [(ngModel)]="username">
-            </div>
-            <div class="input-group justify-content-center">
-                <div class="input-group-append">
-                    <span class="input-group-text"><i class="fa fa-lock"></i></span>
+                <div class="row no-gutters">
+                    <div class="col-sm-2">
+                        <i class="fa fa-unlock-alt"></i>
+                    </div>
+                    <div class="col-sm-10">
+                        <input id="phone" name="phone" type="password" required [(ngModel)]="password">
+                        <label for="phone">Password</label>
+                    </div>
                 </div>
-                <input type="password" placeholder="Enter Password" name="password" [(ngModel)]="password">
-            </div>
+            </form>
             <button class="btn btn-warning" (click)=checkLogin()>
                 Login
             </button>
         </div>
-        <div class="col-sm-6 login">
+        <div class="col-sm-6">
             <div>
                 <p class="registration">
                     Don't have an account. Register here.
@@ -33,5 +37,6 @@
             </button>
         </div>
     </div>
+
 </div>
 

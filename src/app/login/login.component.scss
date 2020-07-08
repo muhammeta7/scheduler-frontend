@@ -1,43 +1,99 @@
-.container{
-  width: 100%;
-  margin-top: 5%;
-  color: white;
+form {
+  width: 80%;
+  float: left;
+  margin: 20px;
+  background-image: url("https://www.transparenttextures.com/patterns/crossword.png");
+  background-color: #aed6dc;
+  padding: 8%;
+  > div {
+    position: relative;
+    overflow: hidden;
+  }
+  input {
+    width: 100%;
+    background-color: #ced7d8;
+    background-image: url("https://www.transparenttextures.com/patterns/back-pattern.png");
+    position: relative;
+    top: 0;
+    left: 0;
+    padding: 8px 8px;
+    font-size: 1rem;
+    // outline: 0;
+    &:valid {
+      // Hides the label
+      background: white;
+    }
+    &:focus {
+      border-color: #f06d06;
+    }
+    &:focus + label {
+      background: #f06d06;
+      color: white;
+      font-size: 70%;
+      padding: 1px 6px;
+      z-index: 2;
+      text-transform: uppercase;
+    }
+  }
+  label {
+    transition: // not padding
+            background 0.2s,
+            color 0.2s,
+            top 0.2s,
+            bottom 0.2s,
+            right 0.2s,
+            left 0.2s;
+    position: absolute;
+    color: #316879;
+    padding: 7px 6px;
+  }
 }
 
-.login{
+
+form.go-right {
+  label {
+    top: 2px;
+    right: 100%;
+    width: 100%;
+    margin-right: -100%;
+    bottom: 2px;
+  }
+  input:focus + label {
+    right: 0;
+    margin-right: 0;
+    width: 40%;
+    padding-top: 5px;
+  }
+}
+
+.row.no-gutters{
+  border: 2px solid #316879;
+  margin: 2% auto;
+}
+
+.col-sm-2{
   text-align: center;
-  border: 1px solid black;
-  background-image: url("https://www.transparenttextures.com/patterns/ag-square.png");
-  background-color: rgba(244, 148, 96, 0.76);
-}
-
-.input-group{
-  margin-top: 3%;
-  max-width: 100%;
-}
-
-.fa-lock{
-  width: 16px;
+  border-right: 2px solid #316879;
+  width: 50%;
+  padding-top: 2%;
 }
 
 button{
-  margin: 3% auto;
-}
-
-.registration{
-  text-align: center;
-  margin-top: 3%;
-  color: white;
-}
-
-span.input-group-text, button{
-  background-image: url("https://www.transparenttextures.com/patterns/brilliant.png");
   background-color: #316879;
   color: #7fe7dc;
 }
 
-i{
-  color: #7fe7dc;
+.col-sm-2{
+  background-image: url("https://www.transparenttextures.com/patterns/brilliant.png");
+  background-color: #316879;
+  color: rgba(244, 148, 96, 0.76);
+}
+
+.col-sm-6{
+  background-image: url("https://www.transparenttextures.com/patterns/exclusive-paper.png");
+  background-color: rgba(250, 176, 87, 0.49);
+  margin: 2.5% auto;
+  border: 1px solid #316879;
 }
 
 

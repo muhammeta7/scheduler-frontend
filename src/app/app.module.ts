@@ -13,14 +13,12 @@ import {AuthHttpInterceptorService} from './services/auth-http-interceptor.servi
 import { SignUpComponent } from './sign-up/sign-up.component';
 import {RouterModule, Routes} from '@angular/router';
 import { NavigationComponent } from './navigation/navigation.component';
-import { FormtestComponent } from './formtest/formtest.component';
 
 const appRoutes: Routes = [
     {path: '', component: LoginComponent},
     {path: 'login', component: LoginComponent},
     {path: 'logout', component: LogoutComponent},
-    {path: 'register', component: SignUpComponent},
-    {path: 'form', component: FormtestComponent}
+    {path: 'register', component: SignUpComponent}
 ];
 
 @NgModule({
@@ -32,8 +30,7 @@ const appRoutes: Routes = [
         AddEmployeeComponent,
         FooterComponent,
         SignUpComponent,
-        NavigationComponent,
-        FormtestComponent
+        NavigationComponent
     ],
     imports: [
         BrowserModule,
