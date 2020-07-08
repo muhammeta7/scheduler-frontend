@@ -118,31 +118,31 @@
                         </div>
                     </div>
                     <!-- Confirm Password TODO: Need to fix data binding-->
-                    <div class="input-group user_info">
-                        <div class="input-group-append">
-                            <span class="input-group-text"><i class="fa fa-check-square"></i></span>
-                        </div>
-                        <input
-                                type="text"
-                                id="confirm"
-                                name="confirm"
-                                class="form-control"
-                                placeholder="Confirm Password"
-                                [(ngModel)]="userModel.password"
-                                #confirm="ngModel"
-                                [ngClass]="{ 'is-invalid': f.submitted && confirm.invalid }"
-                                required
-                                minlength="3"
-                        />
-                        <div
-                                *ngIf="f.submitted && confirm.invalid"
-                                class="invalid-tooltip text-center w-100 mb-3 error-message"
-                        >
-                            <div *ngIf="password.errors?.required">
-                                Must be at least 3 characters
-                            </div>
-                        </div>
-                    </div>
+<!--                    <div class="input-group user_info">-->
+<!--                        <div class="input-group-append">-->
+<!--                            <span class="input-group-text"><i class="fa fa-check-square"></i></span>-->
+<!--                        </div>-->
+<!--                        <input-->
+<!--                                type="text"-->
+<!--                                id="confirm"-->
+<!--                                name="confirm"-->
+<!--                                class="form-control"-->
+<!--                                placeholder="Confirm Password"-->
+<!--                                [(ngModel)]="userModel.password"-->
+<!--                                #confirm="ngModel"-->
+<!--                                [ngClass]="{ 'is-invalid': f.submitted && confirm.invalid }"-->
+<!--                                required-->
+<!--                                minlength="3"-->
+<!--                        />-->
+<!--                        <div-->
+<!--                                *ngIf="f.submitted && confirm.invalid"-->
+<!--                                class="invalid-tooltip text-center w-100 mb-3 error-message"-->
+<!--                        >-->
+<!--                            <div *ngIf="password.errors?.required">-->
+<!--                                Must be at least 3 characters-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
                     <div class="d-flex justify-content-center">
                         <div class="d-flex justify-content-center login_container">
                             <button
