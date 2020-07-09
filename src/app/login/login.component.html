@@ -1,42 +1,33 @@
-<div class="container">
-    <div class="row">
-        <div class="col-sm-6">
-            <form class="go-right">
+
+<div class="flex-container">
+
+
+            <form class="go-bottom">
                 <h5>Already a member?</h5>
-                <div class="row no-gutters">
-                    <div class="col-sm-2">
-                        <i class="fa fa-user-circle"></i>
-                    </div>
-                    <div class="col-sm-10">
+                <div class="row">
+<!--                        <i class="fa fa-user-circle"></i>-->
                         <input id="username" name="username" type="text" required [(ngModel)]="username">
                         <label for="username">Username</label>
-                    </div>
                 </div>
-                <div class="row no-gutters">
-                    <div class="col-sm-2">
-                        <i class="fa fa-unlock-alt"></i>
-                    </div>
-                    <div class="col-sm-10">
+                <div class="row">
+<!--                        <span><i class="fa fa-unlock-alt"></i></span>-->
                         <input id="phone" name="phone" type="password" required [(ngModel)]="password">
                         <label for="phone">Password</label>
-                    </div>
                 </div>
+                <button class="btn btn-warning" (click)=checkLogin()>
+                    Login
+                </button>
             </form>
-            <button class="btn btn-warning" (click)=checkLogin()>
-                Login
-            </button>
-        </div>
-        <div class="col-sm-6">
-            <div>
-                <p class="registration">
-                    Don't have an account. Register here.
-                </p>
-            </div>
-            <button class="btn btn-warning" (click)=goToSignUpPage()>
-                Sign-Up
-            </button>
-        </div>
-    </div>
+
+
+<!--            <div>-->
+<!--                <p class="registration">-->
+<!--                    Don't have an account. Register here.-->
+<!--                </p>-->
+<!--            </div>-->
+<!--            <button class="btn btn-warning" (click)=goToSignUpPage()>-->
+<!--                Sign-Up-->
+<!--            </button>-->
 
 </div>
 
