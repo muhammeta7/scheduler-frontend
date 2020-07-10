@@ -3,8 +3,8 @@ form {
   float: left;
   background-image: url("https://www.transparenttextures.com/patterns/crossword.png");
   background-color: #aed6dc;
-  margin: 5% auto;
-  padding: 4%;
+  margin: 10% auto;
+  padding: 10%;
   > div {
     position: relative;
     overflow: hidden;
@@ -17,21 +17,20 @@ form {
     left: 0;
     padding: 8px 8px;
     font-size: 1rem;
-    // outline: 0;
     &:valid {
-      // Hides the label
       background: white;
     }
     &:focus {
-      border-color: #f06d06;
+      border-color: rgba(250, 163, 87, 0.69);
     }
     &:focus + label {
-      background: #f06d06;
+      background-color: rgba(250, 163, 87, 0.69);
+      background-image: url("https://www.transparenttextures.com/patterns/exclusive-paper.png");
       color: white;
-      font-size: 70%;
+      font-size: 80%;
       padding: 1px 6px;
-      z-index: 2;
       text-transform: uppercase;
+      font-weight: bold;
     }
   }
   label {
@@ -48,8 +47,7 @@ form {
   }
 }
 
-
-form.go-right {
+form.go-bottom {
   label {
     top: 2px;
     right: 100%;
@@ -60,23 +58,7 @@ form.go-right {
   input:focus + label {
     right: 0;
     margin-right: 0;
-    width: 40%;
-    padding-top: 5px;
-  }
-}
-
-form.go-bottom {
-  label {
-    top: 2px;
-    right: 100%;
     width: 100%;
-    margin-right: -100%;
-    bottom: 2px;
-  }
-  input:focus + label, textarea:focus + label {
-    right: 0;
-    margin-right: 0;
-    width: 40%;
     padding-top: 5px;
   }
 }
@@ -107,5 +89,12 @@ button{
   -webkit-flex: 1; /* Safari */
   -ms-flex: 1; /* IE 10 */
   flex: 1; /* Standard syntax */
+}
+
+.responsiveImage{
+  width: 25%;
+  height: 25%;
+  //max-width: 100%;
+  margin: 0 40%;
 }
 
