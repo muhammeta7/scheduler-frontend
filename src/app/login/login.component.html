@@ -2,34 +2,29 @@
     <img src="https://i.imgur.com/LOM8WX2.png" alt="logo" class="responsiveImage"/>
 </div>
 
-
 <div class="flex-container">
 
-        <form class="go-bottom">
-            <h5>Already a member?</h5>
-            <div class="row">
-                <!--                        <i class="fa fa-user-circle"></i>-->
-                <input id="username" name="username" type="text" required [(ngModel)]="username">
-                <label for="username">Username</label>
-            </div>
-            <div class="row">
-                <!--                      <span><i class="fa fa-unlock-alt"></i></span>-->
-                <input id="phone" name="phone" type="password" required [(ngModel)]="password">
-                <label for="phone">Password</label>
-            </div>
-            <button class="btn btn-warning" (click)=checkLogin()>
-                Login
-            </button>
-            <div>
-                <p class="registration">
-                    Don't have an account. <span><a routerLink="/register">Register Here</a></span>
-                </p>
-            </div>
-        </form>
-
-<!--            <button class="btn btn-warning" (click)=goToSignUpPage()>-->
-<!--                Sign-Up-->
-<!--            </button>-->
+    <form class="go-bottom">
+        <h5>Already a member?</h5>
+        <div class="row">
+            <!--                        <i class="fa fa-user-circle"></i>-->
+            <input id="username" name="username" type="text" required [(ngModel)]="username">
+            <label for="username">Username</label>
+        </div>
+        <div class="row">
+            <!--                      <span><i class="fa fa-unlock-alt"></i></span>-->
+            <input id="phone" name="phone" type="password" required [(ngModel)]="password">
+            <label for="phone">Password</label>
+        </div>
+        <button class="btn btn-warning" (click)=checkLogin()>
+            Login
+        </button>
+        <div>
+            <p class="registration">
+                Don't have an account. <span><a routerLink="/register">Register Here</a></span>
+            </p>
+        </div>
+    </form>
 
 </div>
 
