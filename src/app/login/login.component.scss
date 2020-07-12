@@ -94,7 +94,17 @@ button{
 .responsiveImage{
   width: 25%;
   height: 25%;
-  //max-width: 100%;
   margin: 0 40%;
 }
 
+.registration{
+  margin-top: 2%;
+}
+.registration span a {
+  color: #316879;
+}
+
+.registration span a:hover {
+  font-size: 1.25rem;
+  color: white;
+}
